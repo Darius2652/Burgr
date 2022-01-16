@@ -1,0 +1,13 @@
+$color-primary: #FFC90E
+$color-accent: #C74242
+$nav-bar-height: 6rem
+
+$break-mobile: 600px
+$break-desktop: 1600px
+
+@mixin desktop
+  @media screen and (min-width: $break-desktop)
+    @content
+@mixin mobile
+  @media screen and (max-width: $break-mobile)
+    @content

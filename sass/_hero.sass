@@ -1,0 +1,45 @@
+.hero
+  text-align: center
+  font-size: 3rem
+  flex: 1
+  font-weight: bold
+  line-height: 0.9
+  @include desktop
+    font-size: 5rem
+  @include mobile
+    flex: none
+  img
+    width: 100%
+    display: block
+  &__container
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    margin: 0 auto
+    height: 100%
+    position: relative
+    z-index: 2
+    @include mobile
+      flex-direction: column
+      justify-content: center
+  &__background
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    background-color: $color-primary
+    background-image: url('/images/noise.png')
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 50%
+      height: 100%
+      background-color: black
+      @include mobile
+        width: 100%
+        height: 50%

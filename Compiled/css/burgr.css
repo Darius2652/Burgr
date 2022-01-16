@@ -1,0 +1,294 @@
+.hero {
+  text-align: center;
+  font-size: 3rem;
+  flex: 1;
+  font-weight: bold;
+  line-height: 0.9
+}
+
+@media screen and (min-width: 1600px) {
+  .hero {
+    font-size: 5rem
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    flex: none
+  }
+}
+
+.hero img {
+  width: 100%;
+  display: block
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  z-index: 2
+}
+
+@media screen and (max-width: 600px) {
+  .hero__container {
+    flex-direction: column;
+    justify-content: center
+  }
+}
+
+.hero__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #FFC90E;
+  background-image: url("/images/noise.png")
+}
+
+.hero__background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: black
+}
+
+@media screen and (max-width: 600px) {
+  .hero__background::before {
+    width: 100%;
+    height: 50%
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  transition: right 0.3s ease;
+  overflow: hidden
+}
+
+.nav--visible {
+  right: 0%
+}
+
+.nav-toggle {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer
+}
+
+.nav-toggle__bar {
+  position: absolute;
+  height: 0.36rem;
+  margin-top: -0.2rem;
+  width: 40%;
+  left: 30%;
+  border-radius: 1em;
+  background-color: black;
+  transition: transform 0.2s ease, top 0.2s ease, background-color 0.4s ease
+}
+
+@media screen and (max-width: 600px) {
+  .nav-toggle__bar {
+    background-color: white
+  }
+}
+
+.nav-toggle__bar:nth-child(1) {
+  top: 37%
+}
+
+.nav-toggle__bar:nth-child(2) {
+  top: 50%
+}
+
+.nav-toggle__bar:nth-child(3) {
+  top: 63%
+}
+
+.nav-toggle--toggled .nav-toggle__bar {
+  background-color: white
+}
+
+.nav-toggle--toggled .nav-toggle__bar:nth-child(1) {
+  top: 50%;
+  transform: rotate(135deg)
+}
+
+.nav-toggle--toggled .nav-toggle__bar:nth-child(2) {
+  top: 50%;
+  transform: rotate(225deg)
+}
+
+.nav-toggle--toggled .nav-toggle__bar:nth-child(3) {
+  top: 50%;
+  transform: rotate(405deg)
+}
+
+.nav__highlight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40rem;
+  pointer-events: none;
+  opacity: 0.1;
+  font-weight: bolder;
+  transition: filter 50ms ease;
+  filter: blur(0px)
+}
+
+.nav__item {
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  z-index: 1
+}
+
+.nav__item:hover {
+  color: #ffe074
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  z-index: 101;
+  justify-content: space-between;
+  align-items: center
+}
+
+.nav-bar__section {
+  display: flex;
+  flex-direction: row;
+  height: 100%
+}
+
+.nav-bar__item {
+  padding: 2em 1em;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.1s ease
+}
+
+.nav-bar__item:hover {
+  opacity: 1
+}
+
+.nav-bar__item img {
+  height: 100%;
+  display: block
+}
+
+.nav-bar__logo {
+  height: 70%;
+  margin: 15% 2rem;
+  display: block
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.align-left {
+  text-align: left
+}
+
+.align-right {
+  text-align: right
+}
+
+.align-center {
+  text-align: center
+}
+
+@media screen and (max-width: 600px) {
+  .align-sm-left {
+    text-align: left
+  }
+  .align-sm-right {
+    text-align: right
+  }
+  .align-sm-center {
+    text-align: center
+  }
+}
+
+.color-white {
+  color: white
+}
+
+.color-black {
+  color: black
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit
+}
+
+.button {
+  background-color: #C74242;
+  color: white;
+  border-radius: 5rem;
+  padding: 0.5em 1.2em;
+  border: none;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  margin: 1rem
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    font-size: 1.4rem
+  }
+}
+
+.button:hover {
+  background-color: #d36969
+}
+
+.button:active {
+  background-color: #a53131
+}
