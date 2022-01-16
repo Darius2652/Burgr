@@ -49,7 +49,7 @@
   height: 100%;
   z-index: 1;
   background-color: #FFC90E;
-  background-image: url("/images/noise.png")
+  background-image: url("../images/noise.png")
 }
 
 .hero__background::before {
