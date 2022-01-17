@@ -15,4 +15,4 @@ I built the site using NodeJS, Express, SASS and Pug. To use these:
 
 Meant for educational purposes, but feel free to use it for any reasons within the limits of the MIT license.
 
-Original post and inspiration was created by Reddit user [Informal-Abies-3343](https://www.reddit.com/user/Informal-Abies-3343/)
+Original post and inspiration was created by Reddit user [Informal-Abies-3343](https://www.reddit.com/user/Informal-Abies-3343/) (Account has since been deleted)
